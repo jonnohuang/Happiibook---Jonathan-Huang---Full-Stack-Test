@@ -1,6 +1,6 @@
-import React from 'react';
-import DayPicker from 'react-day-picker';
-import 'react-day-picker/lib/style.css';
+import React from "react";
+import DayPicker from "react-day-picker";
+import "react-day-picker/lib/style.css";
 
 const currentYear = new Date().getFullYear();
 const fromMonth = new Date(currentYear, 0);
@@ -29,7 +29,7 @@ function YearMonthForm({ date, localeUtils, onChange }) {
         ))}
       </select>
       <select name="year" onChange={handleChange} value={date.getFullYear()}>
-        {years.map(year => (
+        {years.map((year) => (
           <option key={year} value={year}>
             {year}
           </option>
@@ -39,12 +39,12 @@ function YearMonthForm({ date, localeUtils, onChange }) {
   );
 }
 
-export default class DayPicker extends React.Component {
+export default class PickDay extends React.Component {
   constructor(props) {
     super(props);
     this.handleYearMonthChange = this.handleYearMonthChange.bind(this);
     this.state = {
-      month: fromMonth,
+      month: fromMonth
     };
   }
 
